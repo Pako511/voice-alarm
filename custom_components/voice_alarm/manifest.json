@@ -2,10 +2,11 @@
   "domain": "voice_alarm",
   "name": "Voice Alarm",
   "version": "1.0.0",
-  "documentation": "https://github.com/Pako511/voice_alarm",
+  "documentation": "https://github.com/Pako511/voice-alarm",
   "codeowners": ["@Pako511"],
   "requirements": [],
   "iot_class": "local_push",
   "config_flow": false,
-  "dependencies": ["http", "frontend"]
+  "dependencies": ["http", "frontend"],
+  "hacs": "1.6.0"
 }
