@@ -1,0 +1,9 @@
+{
+  "name": "Voice Alarm",
+  "render_readme": true,
+  "domains": ["voice_alarm"],
+  "homeassistant": "2023.9.0",
+  "zip_release": true,
+  "filename": "voice_alarm.zip",
+  "content_in_root": false
+}

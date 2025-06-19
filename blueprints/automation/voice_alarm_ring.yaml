@@ -1,0 +1,49 @@
+blueprint:
+  name: Attiva Sveglia Vocale
+  description: Automazione per attivare azioni quando suona una sveglia vocale
+  domain: automation
+  input:
+    media_player:
+      name: Player Audio
+      description: Player per riprodurre l'allarme
+      selector:
+        entity:
+          domain: media_player
+    tts_service:
+      name: Servizio TTS
+      description: Servizio per sintesi vocale (es. tts.google_translate_say)
+      default: tts.google_translate_say
+      selector:
+        text:
+    message:
+      name: Messaggio
+      description: Messaggio da riprodurre (es. "Sveglia! Sono le 7:15")
+      default: "Sveglia! Sono le {{ trigger.event.data.alarm.time }}"
+      selector:
+        text:
+    light_entity:
+      name: Luce da attivare
+      description: Opzionale - Luce da accendere
+      selector:
+        entity:
+          domain: light
+      optional: true
+
+variables:
+  alarm_time: "{{ trigger.event.data.alarm.time }}"
+
+action:
+  - service: !input tts_service
+    data:
+      message: !input message
+      entity_id: !input media_player
+  - if:
+      - condition: template
+        value_template: "{{ light_entity != '' }}"
+    then:
+      - service: light.turn_on
+        target:
+          entity_id: !input light_entity
+        data:
+          brightness: 255
+          color_temp: 400

@@ -1,0 +1,20 @@
+set_alarm:
+  description: Imposta una nuova sveglia
+  fields:
+    time:
+      description: "Orario in formato HH:MM"
+      example: "07:15"
+
+remove_alarm:
+  description: Rimuovi una sveglia
+  fields:
+    id:
+      description: "ID della sveglia da rimuovere"
+      example: "a1b2c3d4"
+
+toggle_alarm:
+  description: Abilita/disabilita una sveglia
+  fields:
+    id:
+      description: "ID della sveglia da modificare"
+      example: "a1b2c3d4"
