@@ -1,0 +1,34 @@
+language: "it"
+intents:
+  SetAlarmIntent:
+    data:
+      - sentences:
+          - "[imposta] [una] sveglia [per] [alle] {time}"
+          - "[svegliami] [alle] {time}"
+          - "[alarm] [set] {time}"
+          - "[pompi] [sveglia] {time}"
+        slots:
+          time:
+            type: time
+
+  RemoveAlarmIntent:
+    data:
+      - sentences:
+          - "[rimuovi] [la] sveglia [alle] {time}"
+          - "[cancella] [la] sveglia [alle] {time}"
+          - "[elimina] [la] sveglia [alle] {time}"
+          - "[disarma] [sveglia] {time}"
+        slots:
+          time:
+            type: time
+
+  ToggleAlarmIntent:
+    data:
+      - sentences:
+          - "[attiva] [la] sveglia [alle] {time}"
+          - "[disattiva] [la] sveglia [alle] {time}"
+          - "[abilita] [la] sveglia [alle] {time}"
+          - "[disabilita] [la] sveglia [alle] {time}"
+        slots:
+          time:
+            type: time
