@@ -1,0 +1,6 @@
+{
+  "type": "integration",
+  "root": "custom_components",
+  "name": "voice_alarm",
+  "render_readme": true
+}
