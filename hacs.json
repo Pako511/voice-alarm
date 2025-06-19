@@ -7,5 +7,6 @@
   "filename": "voice_alarm.zip",
   "content_in_root": false,
   "persistent_directory": "custom_sentences",
-  "hacs": "1.6.0"
+  "hacs": "1.6.0",
+  "hide_default_branch": true
 }
