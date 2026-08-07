@@ -1,0 +1,13 @@
+{
+  "name": "neon-orbit",
+  "version": "1.0.0",
+  "description": "A viral hypercasual game for Android and iOS",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "web": "npx http-server -p 8080"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
